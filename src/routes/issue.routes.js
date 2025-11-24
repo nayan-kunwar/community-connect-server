@@ -1,9 +1,9 @@
 import { Router } from "express";
 import { verifyToken } from "../middlewares/index.js";
-import { createIssue } from "../controllers/issue.controller.js";
+import { createIssue, getAllIssues } from "../controllers/issue.controller.js";
 
 const router = Router();
 
-router.route("/").post(createIssue);
+router.route("/").post(verifyToken, createIssue).get(getAllIssues);
 
 export default router;
