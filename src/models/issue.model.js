@@ -31,8 +31,8 @@ const IssueSchema = new Schema(
     address: String,
     images: [
       {
-        public_id: { type: String, required: true },
-        secure_url: { type: String, required: true },
+        fileId: { type: String, required: true },
+        url: { type: String, required: true },
       },
     ],
     // comments and upvotes can be added later as separate models

@@ -50,6 +50,8 @@ const CommentSchema = new Schema(
     //   of: Number,
     //   default: {},
     // },
+
+    // create zod schema 
   },
   { timestamps: true }
 );
